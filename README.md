@@ -12,7 +12,7 @@ https://nodejs.org/ja/
 Execute the following commands.
 
     $ git clone  
-    $ cd vue-vuex-typescript  
+    $ cd kaonashi-webapp  
     $ yarn install  
     $ yarn run start  
 
@@ -22,4 +22,4 @@ And access "localhost:8080" using any browser.
 
 `$ yarn run test`
 
-The coverage report is output to "report/".
+The coverage report is output to "coverage/".
