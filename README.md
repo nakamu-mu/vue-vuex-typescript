@@ -2,7 +2,7 @@
 
 - Node.js 8.11.3 or later.  
 https://nodejs.org/ja/
-- TypeScript 2.9.2 or later.  
+- TypeScript 3.0.0 or later.  
 `$ npm install -g typescript`
 - yarn 1.7.0 or later.  
 `$ npm install -g yarn`
@@ -12,7 +12,7 @@ https://nodejs.org/ja/
 Execute the following commands.
 
     $ git clone  
-    $ cd kaonashi-webapp  
+    $ cd vue-vuex-typescript  
     $ yarn install  
     $ yarn run start  
 
