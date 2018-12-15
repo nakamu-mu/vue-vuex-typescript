@@ -1,0 +1,97 @@
+#memberlist {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  overflow: auto;
+}
+
+@mixin memberlist-grid() {
+  display: grid;
+  grid-template-columns: 150px repeat(4, 100px) 150px 1fr 80px;
+  grid-template-rows: 1fr;
+}
+
+#memberlist-header {
+  @include memberlist-grid();
+
+  grid-column: 1 / 2;
+  grid-row: 1;
+
+  font-size: 16px;
+  font-weight: bold;
+  justify-items: center;
+  align-items: center;
+  border: solid;
+  border-width: 1px;
+  border-color: cornflowerblue;
+  background-color: lightskyblue;
+}
+
+@mixin memberlist-item($color) {
+  @include memberlist-grid();
+
+  // border-left: solid;
+  // border-right: solid;
+  border-bottom: dashed;
+  border-width: 1px;
+  border-color: cornflowerblue;
+
+  // color: $color;
+
+  align-items: center;
+  justify-items: center;
+
+  font-size: 14px;
+  font-family: sans-serif;
+
+  height: 30px;
+}
+
+.memberlist-item-m {
+  @include memberlist-item(royalblue);
+}
+
+.memberlist-item-f {
+  @include memberlist-item(hotpink);
+}
+
+.memberlist-name-color-m {
+  color: blue;
+}
+
+.memberlist-name-color-f {
+  color: red;
+}
+
+@mixin memberlist-img-button($imgUrl) {
+  background: url($imgUrl) no-repeat center center;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  border: none;
+  margin: 1px 1px 1px 1px;
+}
+
+.memberlist-button-add {
+  @include memberlist-img-button('../resources/images/plus.svg');
+}
+.memberlist-button-delete {
+  @include memberlist-img-button('../resources/images/minus.svg');
+}
+.memberlist-button-favorite {
+  @include memberlist-img-button('../resources/images/favorite.svg');
+}
+.memberlist-button-favorite-active {
+  @include memberlist-img-button('../resources/images/favorite-active.svg');
+}
+.memberlist-item-active {
+  background-color: aliceblue;
+}
